@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A.B.S</title>
+        <link rel="stylesheet" href="STYLE.CSS">
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT US</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+        <div class="content">
+            <div class="home">
+                <img src="/1.jpeg" alt="logo" width="350px" height="350px" alt="Smiley face"  style="border:5px solid black" >  
+                <h1>ARASUMOODU BROTHERS</h1>
+                <h2>Arts & Sports club</h2>
+            </div>
+           
+        
+            <div class="aboutus">
+            <p>Hello Friends <br>
+                OUT HUSTLE, OUT WORK, OUT THINK, <br>
+                 OUTPLAY, OUTLAST <p>
+            
+            </div>
+            <div class="gallaery">
+               <div class="image">
+                <img src="/2.jpeg" alt="src">
+               </div>
+               <div class="image">
+                <img src="/3.jpeg" alt="src"> </div><br>
+        
+               <div class="image">
+                <img src="/WhatsApp Image 2020-07-11 at 11.23.06 PM(1).jpeg" alt="src">
+               </div>
+               <div class="image">
+                <img src="/WhatsApp Image 2020-07-11 at 11.23.06 PM(2).jpeg" alt="src">
+               </div><br>
+               <div class="image">
+                <img src="/WhatsApp Image 2020-07-11 at 11.23.06 PM.jpeg" alt="src">
+               </div>
+               <div class="image">
+                <img src="/WhatsApp Image 2020-07-11 at 11.25.04 PM.jpeg" alt="src">
+               </div><br>
+               <div class="image">
+                <img src="/WhatsApp Image 2020-07-11 at 11.25.04 PM(1).jpeg" alt="src">
+               </div>
+            </div>    
+            <div>
+              <script type="text/javascript" src="/jquery.js"></script>
+              <script type="text/javascript" >
+              $(document).ready(function(){
+                $('a').click(function(){
+                    //alert("i am click")
+                    var selected = $(this);                   
+                    $('a').removeClass('active');
+                    $(selected).addClass('active');
+
+                });
+                var $a =$('.a'),
+                $b= $('.b'),
+                $c= $('.c'),
+                $d= $('.d'),
+                $home= $('.home'),
+                $aboutus= $('.aboutus'),
+                $gallery= $('.gallery'),
+                $contactus= $('contactus');
+
+                $a.click(function(){
+                    $aboutus.fadeOut();
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                    $home.fadeIn();
+                    
+                });
+                $b.click(function(){
+                    $aboutus.fadeIn();
+                    $home.fadeOut();
+                    $gallery.fadeOut();
+                    $contactus.fadeOut();
+                    
+                });
+                $c.click(function(){
+                    $gallery.fadeIn();
+                    $home.fadeOut();
+                    $aboutus.fadeOut();
+                    $contactus.fadeOut();
+                
+                    
+                });
+                $d.click(function(){
+                    $contactus.fadeIn();
+                    $home.fadeOut();
+                    $gallery.fadeIn();
+                    $aboutus.fadeOut();
+                    
+                    
+                });        
+
+                });
+            
+            
+            </script>
+            </div>
+        </div>
+        
+     
+    </body>
+</html>

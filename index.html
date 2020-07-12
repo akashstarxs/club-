@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A.B.S</title>
+        <link rel="stylesheet" href="STYLE.CSS">
+    </head>
+    <body>
+        <div class="background"v></div>
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT US</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT US</a>
+        </div>
+        <div>
+            <script type="text/javascript" src="/jquery.js"></script>
+            <script type="text/javascript" >
+            $(document).ready(function(){
+              $('a').click(function(){
+                  //alert("i am click")
+                  var selected = $(this);                   
+                  $('a').removeClass('active');
+                  $(selected).addClass('active');
+                  
+
+              });
+              var $a =$('.a'),
+              $b= $('.b'),
+              $c= $('.c'),
+              $d= $('.d'),
+              $home= $('.home'),
+              $aboutus= $('.aboutus'),
+              $gallery= $('.gallery'),
+              $contactus= $('contactus');
+              $aboutus.fadeOut();
+              $gallery.fadeOut();
+              $contactus.fadeIn();
+             
+
+
+              $a.click(function(){
+                  $aboutus.fadeOut();
+                  $gallery.fadeOut();
+                  $contactus.fadeOut();
+                  $home.fadeIn();
+                  
+              });
+              $b.click(function(){
+                  $aboutus.fadeIn();
+                  $home.fadeOut();
+                  $gallery.fadeOut();
+                  $contactus.fadeOut();
+                  
+              });
+              $c.click(function(){
+                  $gallery.fadeIn();
+                  $home.fadeOut();
+                  $aboutus.fadeOut();
+                  $contactus.fadeOut();
+              
+                  
+              });
+              $d.click(function(){
+                  $gallery.fadeOut();  
+                  $home.fadeOut();
+                  $aboutus.fadeOut();
+                  $contactus.fadeIn();
+                  
+                });        
+
+            });
+          
+          
+          </script>
+        </div>
+        <div class="content">
+            <div class="home">
+                <img src="/1.jpeg" alt="logo" width="350px" height="350px" alt="Smiley face"  style="border:5px solid black" >  
+                <h1>ARASUMOODU BROTHERS</h1>
+                <h2>Arts & Sports club</h2>
+
+            </div>
+            <div class="contactus">
+                <div class="contactform" >
+                    <form action="index.html" method="POST">
+                        <input type="text"  class="inputtext" value="First Name">
+                        <input type="text"  class="inputtext" value="Last Name">
+                        <input type="text"  class="inputtext" value="your Mail">
+                        <textarea  class="inputmessage" cols="4" rows="6">Your message</textarea>
+                        <input type="button" class="submitbutton"  value="submit"> 
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="aboutus">
+                <p>Hello Friends <br>
+                    OUT HUSTLE, OUT WORK, OUT THINK, <br>
+                    OUTPLAY, OUTLAST  </p> <br> we are a group of individuals striving to provide <br>
+                    our parts for a better future for the people around us in the field of Sports <br>
+                    and also social work
+            </div>
+            <div class="gallery">
+                <div class="image">
+                    <img src="/WhatsApp Image 2020-07-11 at 11.25.04 PM.jpeg" alt="Smiley">
+                </div>
+                <div class="image">
+                    <img src="/2.jpeg" alt="Smiley">
+                </div>
+                <div class="image">
+                    <img src="/3.jpeg" alt="Smiley">
+                </div>
+               
+              
+
+            </div>
+      
+        
+                  
+                
+
+
+        </div>
+
+
+    
+        
+    </body>
+</html>
